@@ -37,9 +37,34 @@
             <h1>Qui suis-je ?</h1>
             <p>Je suis un développeur web junior, passionné par le développement web et le design. Je suis actuellement en formation de développeur web et web mobile à l'école O'clock. Je suis à la recherche d'un stage de 6 mois à partir de septembre 2021.</p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-            </p>
+            </p><?php  echo "Bonjour." ?>
         </div>
     </section> <!-- END SECTION ABOUT-->
+
+    <div class="main container">
+        <div class="p-row">
+            <div class="main-content">
+                <div class="main-content-text">
+                    <h1>Bienvenue sur mon site web !</h1>
+                    <p>
+                        Je m'appelle <strong>Mardochee</strong>, je suis étudiant en <strong>Développement Web</strong> à <strong>Pôle Formation</strong>.
+                        <br>
+                        <br>
+                        Je suis passionné par le développement web et je suis à la recherche d'un emploi.
+                        <br>
+                        <br>
+                        Je suis disponible pour un stage de <strong>1 à 2 mois</strong> en <strong>Développement Web</strong>.
+                        <br>
+                        <br>
+                        <strong>Pour plus d'informations, veuillez me contacter.</strong>
+                    </p>
+                </div>
+                <div class="main-content-img">
+                    <img src="img/main-content-img.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- SECTION PROJETS-->
     <section class="fluid projets" role="section">
@@ -153,6 +178,18 @@
                         <i class="fas fa-phone-square" aria-hidden="true"></i>  0600 0600 060<br>
                     </p>
                 </div>
+                <?php 
+                error_reporting(E_ALL);
+                ini_set('display_error', 1);
+
+                // On se connect à la a base de données
+                $bdd = new PDO('mysql:host=localhost;dbname=pole_formation;charset=utf8', 'paterne', 'Mardochee2008');
+
+                // On récupère les données du formulaire
+                if(!empty($_POST)) {
+                    
+                }
+                ?>
 
                 <div class="form">
                     <h2 style="text-align: center; padding-bottom: 20px;">Formulaire de contact Paterne</h2>
@@ -189,7 +226,7 @@
 
                             <div class="p-row">
                                 <div class="p-col-6">
-                                    <input type="hidden" name="createdAt" id="email" placeholder="createdAt">
+                                    <input type="hidden" name="createdAt">
                                 </div>
                             </div>
 

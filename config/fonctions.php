@@ -1,8 +1,9 @@
 <?php
 
+require_once dirname(__FILE__).'/dbase.php';
+
 /** @return false|void  */
-function get_url_action()
-{
+function get_url_action() {
     /* @var $_SERVER type */
     $server = filter_var($_SERVER['PHP_SELF']);
     if ($server) :
